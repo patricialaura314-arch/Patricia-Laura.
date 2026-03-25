@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="description" content=" Patricia Laura is a professional book marketing expert helping authors promote their books, increase visibility, and grow their audience with proven strategies.">
-
-<meta name="keywords" content=" book marketing expert, promote my book, author marketing services, book promotion, Amazon book marketing, Patricia Laura">
-
-<meta name="author" content="Patricia Laura">
-
-<meta name="robots" content="index, follow">
-
-<!-- OPEN GRAPH (helps when sharing link) -->
-<meta property="og:title" content="Patricia Laura | Book Marketing Expert">
-<meta property="og: description" content=" Helping authors turn their books into bestsellers through proven marketing strategies.">
-<title>Patricia Laura | Book Marketing Expert for Authors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patricia Laura - Book Marketing Expert & Specialist helping authors turn books into bestsellers.">
+    <meta name="keywords" content="book marketing, author marketing, book launch, Amazon optimization, bestseller, Patricia Laura">
+    <meta name="author" content="Patricia Laura">
+    <meta name="google-site-verification" content="8yHNUG4kFmwAFhIZZQ3tLjW_5zZpKxtPBvKJVGRtHIc" />
+    <title>Patricia Laura | Book Marketing Expert & Specialist</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
@@ -518,103 +513,322 @@
         /* ========================================
            HERO SECTION
         ======================================== */
-        <section class="hero" id="home" role="banner" aria-label="Hero Section - Promote Your Book">
-    <div class="hero-particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+        }
 
-    <div class="container">
-        <!-- Left Column: Hero Text -->
-        <div class="hero-content">
-            <!-- Badge / Announcement -->
-            <div class="hero-badge">
-                <i class="fas fa-star"></i>
-                <span class="badge-text">New Release</span>
-                <div class="hero-badge-dot"></div>
-            </div>
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(201,162,39,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(201,162,39,0.08) 0%, transparent 50%);
+        }
 
-            <!-- Title with SEO Keywords -->
-            <h1 class="hero-title">
-                Discover <span>Your Book Title Here</span> – Bestselling <span>Thriller / Mystery Novel</span>
-            </h1>
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
 
-            <!-- Hero Description (SEO Rich) -->
-            <p class="hero-description">
-                Dive into the world of <strong>thrilling adventures</strong> and <strong>unforgettable characters</strong> in 
-                <em>Your Book Title</em>. Perfect for fans of <strong>military thrillers, espionage novels, and suspense stories</strong>. 
-                Explore plot twists, action-packed sequences, and a gripping storyline that keeps readers hooked.
-            </p>
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--gold-400);
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 8s ease-in-out infinite;
+        }
 
-            <!-- Highlight Box for Key Benefit / USP -->
-            <div class="hero-highlight">
-                <i class="fas fa-book-open"></i>
-                <p>Join thousands of readers who have rated this book 5-stars for its suspenseful storytelling and unforgettable characters.</p>
-            </div>
+        .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; top: 60%; animation-delay: 1s; }
+        .particle:nth-child(3) { left: 35%; top: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { left: 50%; top: 70%; animation-delay: 0.5s; }
+        .particle:nth-child(5) { left: 65%; top: 25%; animation-delay: 1.5s; }
+        .particle:nth-child(6) { left: 80%; top: 55%; animation-delay: 2.5s; }
+        .particle:nth-child(7) { left: 90%; top: 35%; animation-delay: 3s; }
+        .particle:nth-child(8) { left: 15%; top: 85%; animation-delay: 0.8s; }
 
-            <!-- Call to Action Buttons -->
-            <div class="hero-cta">
-                <a href="#buy" class="btn btn-primary" title="Buy Your Book Now">Buy Now</a>
-                <a href="#sample" class="btn btn-secondary" title="Read a Free Sample">Read a Sample</a>
-            </div>
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
 
-            <!-- Optional Stats Section -->
-            <div class="hero-stats">
-                <div>
-                    <div class="hero-stat-number">10K+</div>
-                    <div class="hero-stat-label">Copies Sold</div>
-                </div>
-                <div>
-                    <div class="hero-stat-number">4.9/5</div>
-                    <div class="hero-stat-label">Average Rating</div>
-                </div>
-                <div>
-                    <div class="hero-stat-number">15+</div>
-                    <div class="hero-stat-label">Countries Available</div>
-                </div>
-            </div>
-        </div>
+        .hero-content {
+            color: var(--white);
+        }
 
-        <!-- Right Column: Hero Image -->
-        <div class="hero-image">
-            <div class="hero-image-glow"></div>
-            <div class="hero-image-frame">
-                <div class="hero-image-inner">
-                    <img src="your-book-cover.jpg" alt="Cover of Your Book Title - Thriller / Mystery Novel" />
-                </div>
-            </div>
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
 
-            <!-- Floating Cards for Features or Testimonials -->
-            <div class="hero-floating-card card-1">
-                <div class="floating-card-icon"><i class="fas fa-award"></i></div>
-                <div class="floating-card-number">#1</div>
-                <div class="floating-card-text">Bestseller Rank</div>
-            </div>
-            <div class="hero-floating-card card-2">
-                <div class="floating-card-icon"><i class="fas fa-globe"></i></div>
-                <div class="floating-card-number">15+</div>
-                <div class="floating-card-text">Countries Available</div>
-            </div>
-            <div class="hero-floating-card card-3">
-                <div class="floating-card-icon"><i class="fas fa-users"></i></div>
-                <div class="floating-card-number">10K+</div>
-                <div class="floating-card-text">Happy Readers</div>
-            </div>
-        </div>
-    </div>
+        .hero-badge i {
+            color: var(--gold-400);
+        }
 
-    <!-- Scroll Indicator -->
-    <div class="hero-scroll">
-        <div class="mouse"></div>
-        <span>Scroll to Discover</span>
-    </div>
-</section>
+        .hero-badge-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 28px;
+        }
+
+        .hero-title span {
+            color: var(--gold-400);
+            position: relative;
+        }
+
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(201,162,39,0.3);
+            z-index: -1;
+            border-radius: 4px;
+        }
+
+        .hero-description {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.9;
+            margin-bottom: 25px;
+            max-width: 560px;
+        }
+
+        .hero-highlight {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 22px 28px;
+            background: rgba(255,255,255,0.08);
+            border-left: 4px solid var(--gold-400);
+            border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-highlight i {
+            color: var(--gold-400);
+            font-size: 1.3rem;
+            margin-top: 4px;
+        }
+
+        .hero-highlight p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.9);
+            margin: 0;
+            font-style: italic;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 45px;
+            padding-top: 35px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .hero-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold-400);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130%;
+            height: 130%;
+            background: radial-gradient(circle, rgba(201,162,39,0.25) 0%, transparent 70%);
+            filter: blur(50px);
+            animation: pulse 4s infinite;
+        }
+
+        .hero-image-frame {
+            position: relative;
+            padding: 12px;
+            background: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-2xl);
+            z-index: 2;
+        }
+
+        .hero-image-frame::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, var(--gold-300), var(--gold-500), var(--gold-300));
+            border-radius: var(--radius-2xl);
+            z-index: -1;
+            animation: shimmer 4s linear infinite;
+            background-size: 200% 100%;
+        }
+
+        .hero-image-inner {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            max-width: 430px;
+            border-radius: var(--radius-xl);
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            background: var(--white);
+            padding: 22px 28px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            z-index: 10;
+        }
+
+        .hero-floating-card.card-1 {
+            bottom: 18%;
+            left: -40px;
+            animation: float 5s infinite;
+        }
+
+        .hero-floating-card.card-2 {
+            top: 12%;
+            right: -25px;
+            animation: float 6s infinite;
+            animation-delay: 1.5s;
+        }
+
+        .hero-floating-card.card-3 {
+            bottom: 40%;
+            right: -50px;
+            animation: float 5.5s infinite;
+            animation-delay: 2.5s;
+        }
+
+        .floating-card-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--gradient-gold);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+        }
+
+        .floating-card-number {
+            font-family: var(--font-heading);
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: var(--primary-800);
+        }
+
+        .floating-card-text {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-top: 6px;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+
+        .hero-scroll .mouse {
+            width: 28px;
+            height: 44px;
+            border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .hero-scroll .mouse::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 10px;
+            background: var(--gold-400);
+            border-radius: 4px;
+            animation: scrollWheel 1.8s infinite;
+        }
+
+        @keyframes scrollWheel {
+            0%, 100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 0.4; transform: translateX(-50%) translateY(12px); }
+        }
 
         /* ========================================
            TRUST BAR
@@ -3171,4 +3385,4 @@
 
 </body>
 
-</html>d
+</html>
